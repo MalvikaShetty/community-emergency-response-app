@@ -20,7 +20,7 @@ namespace CommunityEmergencyResponseAPIs.Controllers
         {
             _context = context;
             _client = new HttpClient();
-            _client.DefaultRequestHeaders.Add("authorization", "Bearer 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");
+            _client.DefaultRequestHeaders.Add("authorization", "YOUR API KEY");
         }
 
         [HttpPost("getanswer")]
@@ -48,9 +48,7 @@ namespace CommunityEmergencyResponseAPIs.Controllers
                 max_tokens = 100
             };
 
-            /*    var requestBody = new StringContent("{\"model\": \"gpt-3.5-turbo\", \"messages\": \"" + question + "\", \"temperature\":1,\"max_tokens\":100 }",
-                   Encoding.UTF8, "application/json");
-    */
+
             var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
             HttpResponseMessage response = await _client.PostAsync("https://api.openai.com/v1/chat/completions", content);
             string responseString = await response.Content.ReadAsStringAsync();

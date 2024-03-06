@@ -3649,11 +3649,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malvi\\Angular\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
+      "projectUniqueName": "C:\\Users\\malvi\\Angular\\community-emergency-response-app\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
       "projectName": "CommunityEmergencyResponseAPIs",
-      "projectPath": "C:\\Users\\malvi\\Angular\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
+      "projectPath": "C:\\Users\\malvi\\Angular\\community-emergency-response-app\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
       "packagesPath": "C:\\Users\\malvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malvi\\Angular\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\obj\\",
+      "outputPath": "C:\\Users\\malvi\\Angular\\community-emergency-response-app\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\malvi\\AppData\\Roaming\\NuGet\\NuGet.Config",

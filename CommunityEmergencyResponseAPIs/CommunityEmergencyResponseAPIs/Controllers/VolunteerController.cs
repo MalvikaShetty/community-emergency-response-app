@@ -175,10 +175,5 @@ namespace CommunityEmergencyResponseAPIs.Controllers
             return Ok(new { Message = "Volunteer removed successfully" });
         }
 
-        public class RemoveVolunteerRequest
-        {
-            public string Email { get; set; }
-            public string PhoneNumber { get; set; }
-        }
     }
 }

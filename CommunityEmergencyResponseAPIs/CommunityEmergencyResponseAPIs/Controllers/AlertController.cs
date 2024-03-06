@@ -21,13 +21,11 @@ namespace CommunityEmergencyResponseAPIs.Controllers
         [HttpPost("sendsms")] // Use HttpPost
         public IActionResult SendSMS([FromBody] SmsRequestModel request)
         {
-/*            TwilioClient.Init(_twilioConfig.AccountSid, _twilioConfig.AuthToken);*/
-            TwilioClient.Init("AC6dcd91dc5f555163a54b3f82c54d8477", "80dce6b80be977e167e03a2d583030f6");
+            TwilioClient.Init(_twilioConfig.AccountSid, _twilioConfig.AuthToken);
 
             var messageOptions = new CreateMessageOptions(
             new PhoneNumber(request.PhoneNumber));
-            /* messageOptions.From = new PhoneNumber(_twilioConfig.FromPhoneNumber);*/
-            messageOptions.From = new PhoneNumber("+18883717229");
+            messageOptions.From = new PhoneNumber(_twilioConfig.FromPhoneNumber);
             messageOptions.Body = request.Message;
 
             var messageFinal = MessageResource.Create(messageOptions);

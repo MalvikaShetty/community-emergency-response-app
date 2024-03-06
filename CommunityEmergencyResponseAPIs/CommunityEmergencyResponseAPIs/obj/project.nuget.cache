@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pIngwRzBrN7GHFLHcYBwaw3LNhp364OLBeD+3ZEjHdGUpgkHiNJiNoeJ1w9EFZiwpKRaptLwhLcW/oAdWpn9DQ==",
+  "dgSpecHash": "Lscg6TZ8pamkBXUJsf1CNQ85rwBzXcDSSDPcbRRb/8TYemx10EOpz20f/VSTR3WKZ6FGZoRlYH1k1VWA6mk/Dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\malvi\\Angular\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
+  "projectFilePath": "C:\\Users\\malvi\\Angular\\community-emergency-response-app\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs\\CommunityEmergencyResponseAPIs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\malvi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\malvi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -7,8 +7,8 @@ import { Observable, of } from 'rxjs';
 })
 
 export class MapService {
-    // API NOT WORKING RIGHT NOW- CORS issue from the other end
-//   private apiUrl = 'https://healthsites.io/api/v3/facilities/point/hospital?api-key=c7990d4c13a79f00661ae46561d22a8e3e66b1e6&format=json';
+//   API NOT WORKING RIGHT NOW- CORS issue from the other end
+//   private apiUrl = 'https://healthsites.io/api/v3/facilities/point/hospital?api-key=YPUR-API-KEY&format=json';
 
   constructor(private http: HttpClient) { }
 
@@ -16,8 +16,8 @@ export class MapService {
 //     return this.http.get(this.apiUrl);
 //   }
 
+// THE DATA BELOW IS FROM THIS URL-
 // https://njogis-newjersey.opendata.arcgis.com/datasets/newjersey::hospitals-in-nj/explore
-// https://njogis-newjersey.opendata.arcgis.com/datasets/newjersey::hospitals-in-nj/about
 
     getHospitalMapData(): Observable<any>{
         const data = 
