@@ -21,17 +21,36 @@ The Community Emergency Response App (CERA) is a project aimed at enhancing comm
 ### Volunteer Network
 - Join the community of volunteers willing to assist others in need.
 - Receive alerts and notifications about emergencies in your area.
+- Click [here](#volunteers-list) to see the screenshot
 
 ### Chat Support
 - Connect with an AI chatbot or human volunteers to ask questions or seek assistance.
 - Get real-time responses and support.
+- Click [here](#chat) to see the screenshot
 
 ### Map Feature
 - Explore nearby healthcare facilities and resources in New Jersey(Can be expanded to other states).
 - Filter and search for specific facilities based on your requirements(To be added).
+- Click [here](#map) to see the screenshot
+
+### Resource Page
+- Get information on facilities around you, emergency numbers, NGOs, etc.
+- Click [here](#resource) to see the screenshot
 
 ### Dashboard
 ![dashboardPage](https://github.com/MalvikaShetty/community-emergency-response-app/assets/66647891/543efcf3-876d-4e1c-bea0-1f9481e456c5)
+
+### Volunteers List
+![VolunteersPage](https://github.com/MalvikaShetty/community-emergency-response-app/assets/66647891/97648ab4-815e-43ad-9514-81ebd650a2db)
+
+### Add Volunteers
+![AddVolunteerPage](https://github.com/MalvikaShetty/community-emergency-response-app/assets/66647891/21e48596-a62f-4673-b24f-db9246f62c8e)
+
+### Chat
+![ChatWithAI](https://github.com/MalvikaShetty/community-emergency-response-app/assets/66647891/2faa3ad2-dab0-47c6-8048-34d58b4bd36e)
+
+##Resource
+
 
 ## How It Works
 
