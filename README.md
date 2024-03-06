@@ -5,7 +5,7 @@ The Community Emergency Response App (CERA) is a project aimed at enhancing comm
 ### Technologies Used
 
 - **C# .NET 8:** Backend development framework.
-- **AngularJS 15:** Frontend JavaScript framework.
+- **Angular 15:** Frontend JavaScript framework.
 - **PostgreSQL 15.2:** Relational database management system.
 - **SignalR for Users to Chat with Volunteers:** Chat feature(Work in Progress).
 
