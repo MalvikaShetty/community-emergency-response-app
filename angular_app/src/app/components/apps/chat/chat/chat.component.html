@@ -1,0 +1,149 @@
+<app-breadcrumb [title]="'Chat'" [items]="['Apps']" [active_item]="'Chat'"></app-breadcrumb>
+<!-- Container-fluid starts-->
+
+<div class="container-fluid" style="margin-top:-20px; overflow-y:hidden;">
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col-md-6">
+          <div class="row">
+            <div class="col call-chat-body">
+              <div class="card">
+                <div class="card-body p-0">
+                  <div class="row chat-box" style="height: fit-content;">
+                    <!-- Chat right side start-->
+                    <div class="col pe-0 chat-right-aside">
+                      <!-- chat start-->
+                      <div class="chat">
+                        <!-- chat-header start-->
+                        <div class="chat-header clearfix">
+                          <!-- <img class="rounded-circle" [src]="chatUser?.profile" alt=""> -->
+                          <div class="about">
+                            <div class="name">Chat with a Volunteer  </div>
+                            <div class="status digits"></div>
+                          </div>
+                          <ul class="list-inline float-start float-sm-end chat-menu-icons">
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-search"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-clip"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-headphone-alt"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-video-camera"></i></a></li>
+                            <!-- <li class="list-inline-item toogle-bar" (click)="mobileMenu()"><a href="javascript:void(0)"><i class="icon-menu"></i></a> -->
+                            <!-- </li> -->
+                          </ul>
+                        </div>
+                        <!-- chat-header end-->
+                        <div class="chat-history chat-msg-box custom-scrollbar">
+                          <ul>
+                            <li *ngFor="let message of messagesVolunteerChat">
+                              <div class="message" [ngClass]="{'my-message pull-right': message.sender === 'user', 'other-message pull-left': message.sender === 'AI'}">
+                                {{message.sender}} : {{message.text}}
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                        <form #chatForm="ngForm" (ngSubmit)="sendMessageToVolunteer()">
+                          <div class="chat-message clearfix">
+                            <div class="row">
+                              <div class="col-xl-12 d-flex">
+                                <div class="smiley-box bg-primary">
+                                  <div class="picker">
+                                    <img src="assets/images/smiley.png" alt="" >
+                                  </div>
+                                </div>
+                                <div class="input-group text-box">
+                                  <input class="form-control input-txt-bx" [(ngModel)]="currentMessageVolunteerChat"
+                                    id="message-to-send" type="text" name="message" placeholder="Type a message for Volunteer...">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">SEND</button>
+                                    <button class="btn btn-secondary" (click)="startNewChat()">New Chat</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <!-- end chat-message-->
+                        <!-- chat end-->
+                        <!-- Chat left side ends-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  <div class="col-md-6">
+          <div class="row">
+            <div class="col call-chat-body">
+              <div class="card">
+                <div class="card-body p-0">
+                  <div class="row chat-box" style="height: fit-content;">
+                    <!-- Chat right side start-->
+                    <div class="col pe-0 chat-right-aside">
+                      <!-- chat start-->
+                      <div class="chat">
+                        <!-- chat-header start-->
+                        <div class="chat-header clearfix">
+                          <!-- <img class="rounded-circle" [src]="chatUser?.profile" alt=""> -->
+                          <div class="about">
+                            <div class="name">Chat with AI</div>
+                            <div class="status digits"></div>
+                          </div>
+                          <ul class="list-inline float-start float-sm-end chat-menu-icons">
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-search"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-clip"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-headphone-alt"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-video-camera"></i></a></li>
+                            <li class="list-inline-item toogle-bar" ><a href="javascript:void(0)"><i class="icon-menu"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- chat-header end-->
+                    
+                        <div class="chat-history chat-msg-box custom-scrollbar">
+                          <ul>
+                            <li *ngFor="let message of messages">
+                              <div class="message" [ngClass]="{'my-message pull-right': message.sender === 'user', 'other-message pull-left': message.sender === 'AI'}">
+                                {{message.sender}} : {{message.text}}
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- end chat-history-->
+                        <form #chatForm="ngForm" (ngSubmit)="sendQuestion()">
+                          <div class="chat-message clearfix">
+                            <div class="row">
+                              <div class="col-xl-12 d-flex">
+                                <div class="smiley-box bg-primary">
+                                  <div class="picker">
+                                    <img src="assets/images/smiley.png" alt="">
+                                  </div>
+                                </div>
+                                <div class="input-group text-box">
+                                  <input class="form-control input-txt-bx" [(ngModel)]="chatText"
+                                    id="message-to-send" type="text" name="message" placeholder="Type a message......">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">SEND</button>
+                                    <button class="btn btn-secondary" (click)="startNewChat()">New Chat</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <!-- end chat-message-->
+                        <!-- chat end-->
+                        <!-- Chat right side ends-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+      </div>
+   </div>
+<!-- Container-fluid Ends -->

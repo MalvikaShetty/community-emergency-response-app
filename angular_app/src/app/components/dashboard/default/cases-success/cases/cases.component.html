@@ -1,0 +1,26 @@
+<div class="card widget-1 widget-with-chart">
+  <div class="card-body">
+    <div>
+      <h4 class="mb-1">560</h4>
+      <span class="f-light">Cases</span>
+    </div>
+    <div class="order-chart">
+      <div id="orderchart">
+        <apx-chart
+          [series]="cases.series"
+          [chart]="cases.chart"
+          [colors]="cases.colors"
+          [dataLabels]="cases.dataLabels"
+          [stroke]="cases.stroke"
+          [legend]="cases.legend"
+          [grid]="cases.grid"
+          [yaxis]="cases.yaxis"
+          [tooltip]="cases.tooltip"
+          [xaxis]="cases.xaxis"
+          [responsive]="cases.responsive"
+          [plotOptions]="cases.plotOptions"
+        ></apx-chart>
+      </div>
+    </div>
+  </div>
+</div>

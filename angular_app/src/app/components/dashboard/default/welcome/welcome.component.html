@@ -1,0 +1,39 @@
+<div class="card profile-box" (click)="sendEmergencyAlert()">
+  <div class="background-image">
+  </div>
+  <div class="card-body" style="height: 500px;">
+    <div class="media">
+      <div class="media-body">
+        <div class="greeting-user">
+          <h4 class="f-w-600">Emergency!!!</h4>
+          <p>Click here to alert volunteers near you</p>
+        </div>
+      </div>
+      <div>
+        <div class="badge f-10 p-0" id="txt"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="showPopup" class="popup-backdrop">
+  <div class="card custom-dialog">
+    <div class="card-header">
+      <h5 class="modal-title">Emergency Alert</h5>
+      <button type="button" class="close" aria-label="Close" (click)="closePopup()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="card-body">
+      <p>Do you want to send an Emergency message for this location?</p>
+      <p>Address: {{ address }}</p>
+      <p>My ZipCode is {{ currentZipcode }}</p>
+      <div class="button-group btn-showcase">
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="sendClickedHandler()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+

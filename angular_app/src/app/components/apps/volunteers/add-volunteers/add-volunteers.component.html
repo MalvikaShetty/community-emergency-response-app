@@ -1,0 +1,74 @@
+<app-breadcrumb [title]="'New Volunteer'" [items]="['Volunteers']" [active_item]="'volunteer Registration'"></app-breadcrumb>
+<div class="container-fluid base-inputs">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <form (ngSubmit)="onSubmit()">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="volunteer.name" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city" name="city" [(ngModel)]="volunteer.city" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="volunteer.phoneNumber" required>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="zipCode">Zip Code</label>
+                  <input type="text" class="form-control" id="zipCode" name="zipCode" [(ngModel)]="volunteer.zipCode" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label>Upload Resume/Cover Letter</label>
+                    <ngx-dropzone (change)="onFileSelected($event)" [multiple]="true">
+                        <ngx-dropzone-label>
+                          <div class="dz-message needsclick">
+                            <i class="icon-cloud-up"></i>
+                            <h6>Drop files here or click to upload.</h6>
+                          </div>
+                        </ngx-dropzone-label>
+                        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                          <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                        </ngx-dropzone-preview>
+                      </ngx-dropzone>                    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- <div class="text-end"><a class="btn btn-success me-3" href="#">Add</a><a class="btn btn-danger" href="#">Cancel</a></div> -->
+                </div>
+              </div>
+          </div>
+          <div class="card-footer text-end">
+            <div class="col-sm-9 offset-sm-3">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <input class="btn btn-light" type="reset" value="Cancel" (click)="cancel()" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

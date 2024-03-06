@@ -1,0 +1,6 @@
+@CommunityEmergencyResponseAPIs_HostAddress = http://localhost:5230
+
+GET {{CommunityEmergencyResponseAPIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

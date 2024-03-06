@@ -1,0 +1,24 @@
+ <a class="card widget-1" (click)="onClickRedirect()">
+  <div class="card-body">
+    <div class="widget-content">
+      <div class="widget-round {{data.font}}">
+        <div class="bg-round">
+          <svg class="svg-fill">
+            <use attr.xlink:href="assets/svg/icon-sprite.svg#{{data.icon}}"></use>
+          </svg>
+          <svg class="half-circle svg-fill">
+            <use href="assets/svg/icon-sprite.svg#halfcircle"></use>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <h4>{{data.name}}</h4>
+        <div *ngIf="data.name=='Volunteers' || data.name=='Total Volunteers'">
+          <span class="f-light">Volunteer Count: {{volunteerCount}}</span>
+        </div>
+        <span class="f-light">{{data.counter}}</span>
+      </div>
+    </div>
+    <!-- <div class="font-{{data.font}} f-w-500"><i class="icon-arrow-up icon-rotate me-1"></i><span>{{data.pr}}%</span></div> -->
+  </div>
+</a>

@@ -1,0 +1,125 @@
+
+<app-breadcrumb [title]="'All Volunteers'" [items]="['Volunteer']" [active_item]="'All Volunteers'"></app-breadcrumb>
+<div class="container-fluid">
+  
+
+  <div class="row widget-grid">
+    <div class="col-xxl-auto col-xl-3 col-sm-6 box-col-6">
+      <div *ngIf="!this.userToVolunteer">
+        <div class="row">
+          <div class="col-xl-12">
+            <app-product-status-chart-box [data]="addvolunteer"></app-product-status-chart-box>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="this.userToVolunteer">
+        <div class="row">
+          <div class="col-xl-12">
+            <a class="card widget-1" (click)="onClickChangeRole()">
+              <div class="card-body">
+                <div class="widget-content">
+                  <div>
+                    <h4>Leave Volunteer Role</h4>
+                  </div>
+                  <div class="widget-round">
+                    <div class="bg-round">
+                      <i class="icon-arrow-right"></i> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-auto col-xl-8 col-sm-6 box-col-6">
+      <div class="row">
+        <div class="col-xl-12">
+          <app-product-status-chart-box [data]="totalvolunteers"></app-product-status-chart-box>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-auto col-xl-3 col-sm-6 box-col-6">
+      <div class="row">
+        <div class="col-xl-12">
+          <app-product-status-chart-box [data]="joinedpastmonthvolunteers"></app-product-status-chart-box>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-auto col-xl-3 col-sm-6 box-col-6">
+      <div class="row">
+        <div class="col-xl-12">
+          <app-product-status-chart-box [data]="highestcountcity"></app-product-status-chart-box>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Active Volunteers</h5>
+            <ng-container *ngIf="volunteers.length > 0; else noVolunteers1">
+              <table class="table table-border-none">
+                <thead>
+                  <tr>
+                    <th *ngFor="let column of columns">{{ column }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let volunteer of volunteers">
+                    <td>
+                      <!-- <img class="img-fluid img-40 rounded-circle" src="" alt="user"> -->
+                      <a class="d-block f-w-500" href="user/profile">{{ volunteer.name }}</a>
+                    </td>
+                    <td>{{ volunteer.city }}</td>
+                    <td>{{ volunteer.zipCode }}</td>
+                    <td>{{ volunteer.joiningDate }}</td>
+                    <td>
+                      <a href="#" (click)="downloadResume($event, volunteer.volunteerID)">Download Resume</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ng-container>
+            <ng-template #noVolunteers1>
+              <p>No volunteers yet</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Volunteers Per Zip Code Area</h5>
+            <ng-container *ngIf="volunteers.length > 0; else noVolunteers2">
+              <table class="table table-border-none">
+                <thead>
+                  <tr>
+                    <th *ngFor="let column of columnsSecond">{{ column }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of countsAndCitiesByZipcode">
+                    <td>{{ data.zipcode }}</td>
+                    <td>{{ data.city }}</td>
+                    <td>{{ data.count }}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </ng-container>
+            <ng-template #noVolunteers2>
+              <p>No volunteers yet</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

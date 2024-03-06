@@ -1,0 +1,24 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .greeting-user {
+    color: white; /* Set text color to white or any desired color */
+    padding: 20px; /* Add padding to the text */
+  }
+
+  h4, h5, p, li{
+    color:#383c45;
+}
+  

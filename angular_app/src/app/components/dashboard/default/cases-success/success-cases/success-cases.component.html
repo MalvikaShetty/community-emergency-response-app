@@ -1,0 +1,24 @@
+<div class="card widget-1 widget-with-chart">
+  <div class="card-body">
+    <div>
+      <h4 class="mb-1">500</h4>
+      <span class="f-light">Success Cases</span>
+    </div>
+    <div class="order-chart">
+      <div id="orderchart">
+        <apx-chart
+          [series]="success.series"
+          [chart]="success.chart"
+          [colors]="success.colors"
+          [stroke]="success.stroke"
+          [grid]="success.grid"
+          [xaxis]="success.xaxis"
+          [yaxis]="success.yaxis"
+          [responsive]="success.responsive"
+          [dataLabels]="success.dataLabels"
+          [tooltip]="success.tooltip"
+        ></apx-chart>
+      </div>
+    </div>
+  </div>
+</div>
