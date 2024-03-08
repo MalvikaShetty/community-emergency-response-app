@@ -114,6 +114,9 @@ Once all is done, run using the IDE - IIS Express/https
 3. **Chat Support**: Users can chat with an AI or human volunteer to get assistance, ask questions, or seek advice.
 
 4. **Map Feature**: Users can access a map to locate nearby healthcare facilities and resources in New Jersey, with options to filter and search based on specific criteria.
+ 
+5. **Get Resources**: Users can explore this page to get information/phone numbers/websites of nearby healthcare facilities and emergency numbers of the particular area.
+
 
 ## How to Use
 
@@ -124,7 +127,7 @@ Once all is done, run using the IDE - IIS Express/https
 3. **Chat Support**: Users can initiate a chat session to get real-time support or information.
 
 4. **Map Navigation**: Users can explore the map feature to find nearby healthcare facilities and resources.
-
+   
 ## Future Enhancements
 
 - **Additional Filters**: Add more filters to the map feature for enhanced search capabilities.
